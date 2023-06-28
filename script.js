@@ -1,12 +1,19 @@
 "use strict";
-function each(arr, callback) {
-	let result = [];
-	for (let elem of arr) {
-		result.push( callback(elem) ); // вызываем функцию-коллбэк
-	}
-	return result;
-}
-let result = each(['we', 'qa', 'as', 'cx', 'cx'], function(str) {
-	return str.substr(0,1).toUpperCase()+str.substr(1);
-});
-console.log(result);
+
+let elem = document.querySelector('p');
+let btn1 = document.querySelector('.btn1');
+let btn2 = document.querySelector('.btn2');
+let btn3 = document.querySelector('.btn3');
+
+btn1.addEventListener('click', function(){
+      elem.innerHTML = '<del>' + elem.textContent + '</del>';
+    
+})
+btn2.addEventListener('click', function(){
+    elem.innerHTML = '<b>' + elem.textContent + '</b>';
+  
+})
+btn3.addEventListener('click', function(){
+    elem.classList.add('colored'); 
+})
+
