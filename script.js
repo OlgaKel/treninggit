@@ -1,19 +1,31 @@
+
 "use strict";
 
-let elem = document.querySelector('p');
-let btn1 = document.querySelector('.btn1');
-let btn2 = document.querySelector('.btn2');
-let btn3 = document.querySelector('.btn3');
+let i = 0;
+function timer(){
+	setTimeout(function(){
+console.log(i++);
+if(i<2){
+	timer();
+}
+},1000);
+}
 
-btn1.addEventListener('click', function(){
-      elem.innerHTML = '<del>' + elem.textContent + '</del>';
-    
-})
-btn2.addEventListener('click', function(){
-    elem.innerHTML = '<b>' + elem.textContent + '</b>';
-  
-})
-btn3.addEventListener('click', function(){
-    elem.classList.add('colored'); 
-})
+function timer(){
+	setTimeout(function(){
+console.log(i++);
+if(i<3){
+	timer();
+}
+},2000);
+}
 
+function timer(){
+	setTimeout(function(){
+console.log(i++);
+if(i<4){
+	timer();
+}
+},3000);
+}
+timer();
